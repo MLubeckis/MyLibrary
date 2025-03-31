@@ -1,0 +1,122 @@
+html, button, input, select, textarea {
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    /* color: #666; */
+}
+
+#new-book-modal {
+    width: 100%;
+    height: 100vh;
+    background-color: #4b4b4b8f;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#new-book-modal-content {
+    background-color: white;
+    
+    width: 450px;
+    height: 250px;
+    position: relative;
+    top: 100px;
+    padding: 20px 35px;
+    border-radius: 25px;
+}
+
+#new-book-form {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+#new-book-form .form-input {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    padding: 10px 0px;
+}
+
+
+.form-input input,
+.form-input select{
+    box-sizing: border-box;
+    width: 80%;
+    padding: 22px 10px 8px;
+    border-radius: 10px;
+    border: 0.5px solid #eee;
+}
+
+.form-input input:focus,
+.form-input select:focus {
+    outline: 1px;
+    border: 0.5px solid #919191;
+}
+
+
+.form-input label {
+    max-width: 80%;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 14px;
+    left: 28px;
+}
+
+#new-book-form input[type=button] {
+    justify-self: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background-color: #78827a;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 0.5px solid #eee;
+    grid-column: 1/3;
+}
+
+#new-book-form input[type=button]:hover {
+    background-color: #78827a88;
+}
+
+#new-book-form input[type=button]:active {
+    background-color: #7179729a;
+}
+
+/* #region Table Style */
+table.minimalistBlack {
+    border: 3px solid #000000;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+  }
+  table.minimalistBlack td, table.minimalistBlack th {
+    border: 1px solid #000000;
+    padding: 5px 4px;
+  }
+  table.minimalistBlack tbody td {
+    font-size: 13px;
+  }
+  table.minimalistBlack thead {
+    background: #CFCFCF;
+    background: -moz-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+    background: -webkit-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+    background: linear-gradient(to bottom, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+    border-bottom: 3px solid #000000;
+  }
+  table.minimalistBlack thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    text-align: left;
+  }
+  table.minimalistBlack tfoot td {
+    font-size: 14px;
+  }
+/* #endregion Table Style */

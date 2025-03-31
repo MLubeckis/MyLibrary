@@ -8,28 +8,36 @@
 </head>
 <body>
     <input type="button" value="Pievienot jaunu gramatu">
-
+    <div id="books"></div>
 
     <!-- Modal new book -->
 
     <div id="new-book-modal">
         <div id="new-book-modal-content">
+            <h2>Izveido jaunu gramatu!</h2>
             <form action="" id="new-book-form">
                 <div class="form-input">
-                    <label for="title">Gramatas nosaukums</label>
                     <input type="text" name="title" id="title">
+                    <label for="title">Gramatas nosaukums</label>
                 </div>
                 <div class="form-input">
-                    <label for="author">Gramatas autors</label>
+                    
                     <input type="text" name="author" id="author">
+                    <label for="author">Gramatas autors</label>
                 </div>
                 <div class="form-input">
-                    <label for="pages">Lappusu skaits</label>
+                    
                     <input type="number" name="pages" id="pages">
+                    <label for="pages">Lappusu skaits</label>
                 </div>
                 <div class="form-input">
+                    
+                    <select name="read" id="read">
+                        <option value="" disabled selected>--Izvelies--</option>
+                        <option value="true">Ja</option>
+                        <option value="false">Ne</option>
+                    </select>
                     <label for="read">Vai esi jau izlasijis?</label>
-                    <input type="toggle" name="read" id="read">
                 </div>
                 <input type="button" value="Izveidot">
             </form>

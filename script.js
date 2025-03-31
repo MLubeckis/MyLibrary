@@ -27,8 +27,36 @@ addBookToLibrary("Stormbringer", "Josh Philip Yarros", 125, false);
 addBookToLibrary("WatchME", "Rebe Narros", 1325, true);
 
 
+function displayBooks() {
+    const booksContent = document.querySelector("#books");
+    const booksTable = document.createElement("table");
+    booksTable.classList.add("minimalistBlack");
+    booksTable.innerHTML = "<tr><th>Nosaukums</th><th>Autors</th><th>Lappuses</th><th>Izlasita</th></tr>"
+    for (const book of myLibrary) {
+        const newRow = document.createElement("tr");
+        const tdTitle = document.createElement("td");
+        const tdAuthor = document.createElement("td");
+        const tdPages = document.createElement("td");
+        const tdRead = document.createElement("td");
+
+        tdTitle.textContent = book.title;
+        tdAuthor.textContent = book.author;
+        tdPages.textContent = book.pages;
+        tdRead.textContent = book.read == true ? "Ja" : "Ne";
+
+        newRow.appendChild(tdTitle);
+        newRow.appendChild(tdAuthor);
+        newRow.appendChild(tdPages);
+        newRow.appendChild(tdRead);
+        booksTable.appendChild(newRow);
+        }
+        booksContent.appendChild(booksTable);
+        
+}
 
 
+
+displayBooks()
 
 
 
