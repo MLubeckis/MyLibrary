@@ -11,11 +11,20 @@ function Book(title, author, pages, read){
 }
 
 
+function addBookToLibrary(title, author, pages, read) {
+    let newBook = new Book(title, author, pages, read)
+
+    myLibrary.push(newBook);
+}
 
 
 
-
-
+addBookToLibrary("ONYX STORM", "Rebecca Yarros", 544, false);
+addBookToLibrary("Harlow Nigh", "Pamela Lustinsky", 356, false);
+addBookToLibrary("Magic Weekend", "Rebecca Chihuahua", 421, true);
+addBookToLibrary("Only You?", "Kathy McSister", 851, false);
+addBookToLibrary("Stormbringer", "Josh Philip Yarros", 125, false);
+addBookToLibrary("WatchME", "Rebe Narros", 1325, true);
 
 
 

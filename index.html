@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <input type="button" value="Pievienot jaunu gramatu">
+
+
+    <!-- Modal new book -->
+
+    <div id="new-book-modal">
+        <div id="new-book-modal-content">
+            <form action="" id="new-book-form">
+                <div class="form-input">
+                    <label for="title">Gramatas nosaukums</label>
+                    <input type="text" name="title" id="title">
+                </div>
+                <div class="form-input">
+                    <label for="author">Gramatas autors</label>
+                    <input type="text" name="author" id="author">
+                </div>
+                <div class="form-input">
+                    <label for="pages">Lappusu skaits</label>
+                    <input type="number" name="pages" id="pages">
+                </div>
+                <div class="form-input">
+                    <label for="read">Vai esi jau izlasijis?</label>
+                    <input type="toggle" name="read" id="read">
+                </div>
+                <input type="button" value="Izveidot">
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal new book -->
 
     <script src="script.js"></script>
 </body>
