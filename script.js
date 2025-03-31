@@ -18,17 +18,32 @@ function addBookToLibrary(title, author, pages, read) {
 }
 
 
+document.querySelector("#new-book-form input[type=button]").addEventListener("click", ()=>{
+    const form = document.querySelector("form");
+    const title = form.title.value
+    const author = form.author.value
+    const pages = form.pages.value
+    const read = form.read.value == 'true' ? true : false;
+    let newBook = new Book(title, author, pages, read)
+    myLibrary.push(newBook);
+    displayBooks()
+    closeModal();
+})
 
+document.querySelector("#openModal").addEventListener("click", openModal);
+
+//#region AddStaticBooks
 addBookToLibrary("ONYX STORM", "Rebecca Yarros", 544, false);
 addBookToLibrary("Harlow Nigh", "Pamela Lustinsky", 356, false);
 addBookToLibrary("Magic Weekend", "Rebecca Chihuahua", 421, true);
 addBookToLibrary("Only You?", "Kathy McSister", 851, false);
 addBookToLibrary("Stormbringer", "Josh Philip Yarros", 125, false);
 addBookToLibrary("WatchME", "Rebe Narros", 1325, true);
-
+//#endregion
 
 function displayBooks() {
     const booksContent = document.querySelector("#books");
+    booksContent.innerHTML = '';
     const booksTable = document.createElement("table");
     booksTable.classList.add("minimalistBlack");
     booksTable.innerHTML = "<tr><th>Nosaukums</th><th>Autors</th><th>Lappuses</th><th>Izlasita</th></tr>"
@@ -54,9 +69,16 @@ function displayBooks() {
         
 }
 
+function openModal(){
+    document.querySelector("#new-book-modal").style.display = 'flex';
+}
 
+function closeModal(){
+    document.querySelector("#new-book-modal").style.display = '';
+    document.querySelector("form").reset();
+}
 
-displayBooks()
+displayBooks();
 
 
 
